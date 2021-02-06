@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./index.js" defer></script>
+
+    <title>Quiz test app</title>
+  </head>
+  <body>
+    <!-- Wrapper btn -->
+    <div class="wrapper_btn">
+      <button id="start_btn" onclick="openQuizApp()">Start QUIZ</button>
+      <span class="gocodinggo" id="gocodinggo_dark">goCodingGo</span>
+    </div>
+
+    <!-- Wrapper quiz -->
+    <div class="wrapper_quiz d-none">
+      <div class="order_number">1</div>
+      <div class="timer_content">
+        <p id="timer">10s</p>
+      </div>
+      <div class="clear"></div>
+      <div class="questions_content">
+        <p id="number_1">0</p>
+        <p id="operation">-</p>
+        <div id="number_2">0</div>
+      </div>
+
+      <div class="answers_content">
+        <div class="row">
+          <div class="answer_box">
+            <div class="answer_btn">A</div>
+            <span class="answer_text">x</span>
+          </div>
+          <div class="answer_box">
+            <div class="answer_btn">B</div>
+            <span class="answer_text">x</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="answer_box">
+            <div class="answer_btn">C</div>
+            <span class="answer_text">x</span>
+          </div>
+          <div class="answer_box">
+            <div class="answer_btn">D</div>
+            <span class="answer_text">x</span>
+          </div>
+        </div>
+      </div>
+      <ul class="points_content"></ul>
+      <span class="gocodinggo" id="gocodinggo_dark">goCodingGo</span>
+    </div>
+    <!-- wrapper total points -->
+    <div class="wrapper_total_points d-none">
+      <div class="points">
+        <ul class="point_box">
+          <li class="pointer pointer-success"></li>
+          <li id="result_correct">7</li>
+        </ul>
+        <ul class="point_box">
+          <li class="pointer pointer-timed"></li>
+          <li class="plus">+</li>
+          <li class="pointer pointer-failed"></li>
+          <li id="result_incorrect_and_timed">3</li>
+        </ul>
+        <div class="total_points">
+          Total points: <span id="result_total_points">70</span>
+        </div>
+      </div>
+      <span class="gocodinggo" id="gocodinggo_light">goCodingGo</span>
+    </div>
+  </body>
+</html>
